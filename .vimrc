@@ -11,9 +11,19 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'vim-ruby/vim-ruby'
 Plugin 'preservim/nerdtree'
 Plugin 'gruvbox-community/gruvbox'
+Plugin 'prettier/vim-prettier'
+
+" Typescript
+Plugin 'leafgarland/typescript-vim'
+Plugin 'quramy/tsuquyomi'
+
+" Ruby
+Plugin 'vim-ruby/vim-ruby'
+
+" Liquid
+Plugin 'tpope/vim-liquid'
 
 call vundle#end()
 
@@ -21,6 +31,7 @@ set background=light
 colorscheme gruvbox
 
 map <C-b> :NERDTreeToggle<CR>
+let NERDTreeShowHidden=1
 
 " Turn on syntax highlighting.
 syntax on
@@ -76,7 +87,6 @@ if has("gui_running")
     set guioptions-=T
     set guioptions-=e
     set t_Co=256
-    set guitablabel=%M\ %t
 endif
 
 " Set utf8 as standard encoding and en_US as the standard language
