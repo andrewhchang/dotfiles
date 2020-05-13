@@ -1,6 +1,6 @@
-*My Vim Setup*
+# My Vim Setup
 
-Essentially vanilla Vim, with sensible setup. With the exception of:
+Essentially vanilla Vim, with sensible settings. With the exception of:
 
 ```
 - Nerdtree plugin for file navigation
