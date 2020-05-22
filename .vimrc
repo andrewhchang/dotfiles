@@ -12,8 +12,10 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'preservim/nerdtree'
-Plugin 'gruvbox-community/gruvbox'
 Plugin 'prettier/vim-prettier'
+Plugin 'sonph/onehalf', {'rtp': 'vim/'}
+Plugin 'junegunn/fzf'
+Plugin 'junegunn/fzf.vim'
 
 " Typescript
 Plugin 'leafgarland/typescript-vim'
@@ -27,14 +29,16 @@ Plugin 'tpope/vim-liquid'
 
 call vundle#end()
 
-set background=light
-colorscheme gruvbox
+colorscheme onehalflight 
 
 map <C-b> :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1
 
 " Turn on syntax highlighting.
 syntax on
+
+" Fix window size
+autocmd VimEnter * set winfixwidth
 
 " For plug-ins to load correctly.
 filetype plugin indent on
@@ -80,8 +84,6 @@ if $COLORTERM == 'gnome-terminal'
     set t_Co=256
 endif
 
-set background=dark
-
 " Set extra options when running in GUI mode
 if has("gui_running")
     set guioptions-=T
@@ -96,4 +98,5 @@ set encoding=utf8
 set ffs=unix,dos,mac
 
 set number
+
 
