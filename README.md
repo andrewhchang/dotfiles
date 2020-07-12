@@ -1,11 +1,15 @@
 # My Vim Setup
 
-Essentially vanilla Vim, with sensible settings. With the exception of:
+My Vim setup, with mostly sensible settings. It includes:
 
 ```
 - Nerdtree plugin for file navigation
-- Gruvbox theme plugin
+- Default theme onehalflight
 - Ruby vim support
+- Smart indenting
+- Liquid template support
+- fzf (Silver searcher required for :Ag search)
+- Persistent window sizing
 ```
-
+To use, install Vundle, open up a vim instance and run `PluginInstall`.
 That's all!
