@@ -99,4 +99,8 @@ set ffs=unix,dos,mac
 
 set number
 
-
+" Autoindent, make tab=4 spaces, smart indenting
+set expandtab
+set shiftwidth=4
+set autoindent
+set smartindent
