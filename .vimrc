@@ -67,6 +67,7 @@ let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 set termguicolors
 colorscheme onedark
+imap jj <Esc>
 map <C-b> :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1
 
@@ -85,6 +86,8 @@ nmap <silent> gr <Plug>(coc-references)
 autocmd CursorHold * silent call CocActionAsync('highlight')
 xmap <leader>f  <Plug>(coc-format-selected)
 nmap <leader>f  <Plug>(coc-format-selected)
+nmap <leader>fd :CocCommand prettier.forceFormatDocument<Enter>
+
 set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
 """""" disable annoying lowercase shortcut in visual-mode
@@ -388,3 +391,7 @@ set expandtab
 set shiftwidth=4
 set autoindent
 set smartindent
+
+" Set swapfile directory
+set directory=~/.vim/swap,.
+
